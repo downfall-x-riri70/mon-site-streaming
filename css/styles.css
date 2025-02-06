@@ -1,0 +1,43 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.video-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+.video-item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.video-item p {
+    margin-top: 10px;
+}
