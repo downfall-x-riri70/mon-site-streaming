@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site de Streaming</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .video-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .video-item {
+            width: 200px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenue sur mon site de streaming !</h1>
+
+    <div class="video-container">
+        <video id="video-player" controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+    </div>
+
+   <video width="640" height="360" controls>
+    <source src="vidéos/video1.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture de vidéos.
+</video>
+<a href="vidéos/video1.mp4">
+    <img src="thumbnails/thumbnail1.jpg" alt="Miniature de la vidéo" width="320">
+</a>
+S
+        </div>
+        <div class="video-item" onclick="changeVideo('videos/video2.mp4')">
+            <img src="thumbnails/thumbnail2.jpg" alt="Thumbnail 2" style="width: 100%; border-radius: 10px;">
+            <p>Vidéo 2</p>
+        </div>
+        <div class="video-item" onclick="changeVideo('videos/video3.mp4')">
+            <img src="thumbnails/thumbnail3.jpg" alt="Thumbnail 3" style="width: 100%; border-radius: 10px;">
+            <p>Vidéo 3</p>
+        </div>
+    </div>
+
+    <script>
+        function changeVideo(videoFile) {
+            document.getElementById("video-player").src = videoFile;
+            document.getElementById("video-player").play();
+        }
+    </script>
+
+</body>
+</html>
